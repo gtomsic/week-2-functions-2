@@ -92,6 +92,15 @@ problem3(names, problem3CallBack);
 */
 
 // CODE HERE
+const problem4 = (arr, name, callBack) => {
+  const checkArr = arr.filter((item) => item === name);
+  checkArr.length > 0 ? callBack(true) : callBack(false);
+};
+const callBack4 = (check) => {
+  console.log(check);
+};
+
+problem4(names, 'Gabriel', callBack4);
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE

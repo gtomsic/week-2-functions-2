@@ -196,3 +196,24 @@ const problem3CallBack = (firstName) => {
   console.log('The first name in names is ' + firstName);
 };
 problem3(names, problem3CallBack);
+
+////////// PROBLEM 4 //////////
+
+/*
+  Write a function called contains that takes in three parameters: an array, a name and a callback.  
+  Check if the name exists in the array. 
+  If it does, invoke the callback with true as the argument. 
+  If the name does not exist, invoke the callback with false as the argument.
+*/
+
+// CODE HERE
+
+const problem4 = (arr, name, callBack) => {
+  const checkArr = arr.filter((item) => item === name);
+  checkArr.length > 0 ? callBack(true) : callBack(false);
+};
+const callBack4 = (check) => {
+  console.log(check);
+};
+
+problem4(names, 'Gabriel', callBack4);

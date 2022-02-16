@@ -161,11 +161,11 @@ const purchases = [
 */
 
 // CODE HERE
-const total = [];
-const bobsTotal = purchases.forEach((item) => {
+const bobsTotal = [];
+purchases.forEach((item) => {
   if (item.owner === 'Bob') {
-    total.push(item.price);
+    bobsTotal.push(item.price);
   }
 });
 
-console.log(total.reduce((oldVal, currVal) => oldVal + currVal));
+console.log(bobsTotal.reduce((oldVal, currVal) => oldVal + currVal));

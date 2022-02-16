@@ -123,6 +123,19 @@ problem4(names, 'Gabriel', callBack4);
 */
 
 // CODE HERE
+// CODE HERE
+const uniq = (arr, callback) => {
+  callback(arr);
+};
+
+const uniqCallback = (arr) => {
+  const sets = new Set();
+  arr.forEach((name) => {
+    sets.add(name);
+  });
+  console.log([...sets]);
+};
+uniq(names, uniqCallback);
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.

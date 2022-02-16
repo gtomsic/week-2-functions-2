@@ -227,149 +227,160 @@ problem4(names, 'Gabriel', callBack4);
 */
 
 // CODE HERE
-/// COM BACK HERE
+const uniq = (arr, callback) => {
+  callback(arr);
+};
+
+const uniqCallback = (arr) => {
+  const sets = new Set();
+  arr.forEach((name) => {
+    sets.add(name);
+  });
+  console.log([...sets]);
+};
+uniq(names, uniqCallback);
 
 ////////// PROBLEM 6 //////////
 
-/* 
-  Write a function called each that takes in an array of names and a callback function. 
-  For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
-*/
+// /*
+//   Write a function called each that takes in an array of names and a callback function.
+//   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
+// */
 
-// CODE HERE
-const indexNames = (arr, callback) => {
-  arr.forEach((name, index) => {
-    callback(name, index);
-  });
-};
-const callback6 = (name, index) => {
-  console.log(`${index} My name is ${name}.`);
-};
+// // CODE HERE
+// const indexNames = (arr, callback) => {
+//   arr.forEach((name, index) => {
+//     callback(name, index);
+//   });
+// };
+// const callback6 = (name, index) => {
+//   console.log(`${index} My name is ${name}.`);
+// };
 
-/*
-  Invoke the each function, passing in the names array and a callback function.
-  The callback function should take in two paremeters, item and index.
-  The callback should print a string that says:
-  'The item at index [INDEXPARAM] is [ITEMPARAM].'
-*/
+// /*
+//   Invoke the each function, passing in the names array and a callback function.
+//   The callback function should take in two paremeters, item and index.
+//   The callback should print a string that says:
+//   'The item at index [INDEXPARAM] is [ITEMPARAM].'
+// */
 
-// CODE HERE
-indexNames(names, callback6);
+// // CODE HERE
+// indexNames(names, callback6);
 
-///////// PROBLEM 7 //////////
+// ///////// PROBLEM 7 //////////
 
-/*
-  Write a function called getUserById that takes in three parameters: an array of objects (users), an id and a callback, and searches for the user with a matching id.
-  When the correct user object is found, invoke the callback with the user object as an argument.
-*/
+// /*
+//   Write a function called getUserById that takes in three parameters: an array of objects (users), an id and a callback, and searches for the user with a matching id.
+//   When the correct user object is found, invoke the callback with the user object as an argument.
+// */
 
-// Do not edit the code below.
-var users = [
-  {
-    id: '12d',
-    email: 'tyler@gmail.com',
-    name: 'Tyler',
-    address: '167 East 500 North',
-  },
-  {
-    id: '15a',
-    email: 'cahlan@gmail.com',
-    name: 'Cahlan',
-    address: '135 East 320 North',
-  },
-  {
-    id: '16t',
-    email: 'ryan@gmail.com',
-    name: 'Ryan',
-    address: '192 East 32 North',
-  },
-];
-// Do not edit the code above.
+// // Do not edit the code below.
+// var users = [
+//   {
+//     id: '12d',
+//     email: 'tyler@gmail.com',
+//     name: 'Tyler',
+//     address: '167 East 500 North',
+//   },
+//   {
+//     id: '15a',
+//     email: 'cahlan@gmail.com',
+//     name: 'Cahlan',
+//     address: '135 East 320 North',
+//   },
+//   {
+//     id: '16t',
+//     email: 'ryan@gmail.com',
+//     name: 'Ryan',
+//     address: '192 East 32 North',
+//   },
+// ];
+// // Do not edit the code above.
 
-// CODE HERE
-const getUserById = (arr, callback) => {
-  const id = '16t';
-  callback(arr, id);
-};
-const callback7 = (arr, id) => {
-  const user = arr.filter((user) => user.id === id);
-  if (user.length > 0) {
-    console.log(...user);
-  } else {
-    console.log({ message: 'Sorry user not found.' });
-  }
-};
+// // CODE HERE
+// const getUserById = (arr, callback) => {
+//   const id = '16t';
+//   callback(arr, id);
+// };
+// const callback7 = (arr, id) => {
+//   const user = arr.filter((user) => user.id === id);
+//   if (user.length > 0) {
+//     console.log(...user);
+//   } else {
+//     console.log({ message: 'Sorry user not found.' });
+//   }
+// };
 
-getUserById(users, callback7);
+// getUserById(users, callback7);
 
-////////// CHALLENGE //////////
+// ////////// CHALLENGE //////////
 
-/*
-  You'll be writing a higher order function that returns
-  another function. 
+// /*
+//   You'll be writing a higher order function that returns
+//   another function.
 
-  Create a function called addingFactory that takes in
-  one parameter (it will be a number).
+//   Create a function called addingFactory that takes in
+//   one parameter (it will be a number).
 
-  addingFactory should return a function that takes in
-  one parameter (this will be another number).
+//   addingFactory should return a function that takes in
+//   one parameter (this will be another number).
 
-  The (inner) function that's being returned should add
-  the two parameters together and return the sum.
-*/
+//   The (inner) function that's being returned should add
+//   the two parameters together and return the sum.
+// */
 
-// CODE HERE
-const addingFactory = (number1) => {
-  return function (number2) {
-    const sum = number1 + number2;
-    return sum;
-  };
-};
+// // CODE HERE
+// const addingFactory = (number1) => {
+//   return function (number2) {
+//     const sum = number1 + number2;
+//     return sum;
+//   };
+// };
 
-console.log(addingFactory(2)(4));
+// console.log(addingFactory(2)(4));
 
-/*
-  Now that you have addingFactory, you can create other
-  functions from it. 
+// /*
+//   Now that you have addingFactory, you can create other
+//   functions from it.
 
-  You're going to invoke addingFactory and save the result
-  to a new variable. 
+//   You're going to invoke addingFactory and save the result
+//   to a new variable.
 
-  Create a variable called addTen and set it equal to 
-  the invocation of addingFactory passing in the number
-  10 as an arguemnt.
-*/
+//   Create a variable called addTen and set it equal to
+//   the invocation of addingFactory passing in the number
+//   10 as an arguemnt.
+// */
 
-// CODE HERE
+// // CODE HERE
 
-const addTen = (number1, number2) => addingFactory(number1)(number2);
-console.log(addTen(10, 10));
+// const addTen = (number1, number2) => addingFactory(number1)(number2);
+// console.log(addTen(10, 10));
 
-/*
-  Now the inner function is stored in the addTen variable! 
+// /*
+//   Now the inner function is stored in the addTen variable!
 
-  Call the addTen function passing in another number and
-  console log the result.
+//   Call the addTen function passing in another number and
+//   console log the result.
 
-  Call it a second time, passing in a different number
-  to see the different outputs.
-*/
+//   Call it a second time, passing in a different number
+//   to see the different outputs.
+// */
 
-// CODE HERE
-console.log(addTen(5, 10));
+// // CODE HERE
+// console.log(addTen(5, 10));
 
-/*
-  Let's make another function from the addingFactory. 
+// /*
+//   Let's make another function from the addingFactory.
 
-  This time, pass in your favorite number and name
-  the variable addNUMBER with the name of the number
-  you chose. 
+//   This time, pass in your favorite number and name
+//   the variable addNUMBER with the name of the number
+//   you chose.
 
-  Once you create that, you can invoke the function
-  to add any number to your favorite number!
-*/
+//   Once you create that, you can invoke the function
+//   to add any number to your favorite number!
+// */
 
-// CODE HERE
+// // CODE HERE
 
-const addNumber = (fav1, fav2) => addingFactory(fav1)(fav2);
-console.log(addNumber(3, 6));
+// const addNumber = (fav1, fav2) => addingFactory(fav1)(fav2);
+// console.log(addNumber(3, 6));

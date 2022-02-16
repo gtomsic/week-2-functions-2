@@ -141,6 +141,16 @@ problem4(names, 'Gabriel', callBack4);
 */
 
 // CODE HERE
+const indexNames = (arr, callback) => {
+  arr.forEach((name, index) => {
+    callback(name, index);
+  });
+};
+const callback6 = (name, index) => {
+  console.log(`${index} My name is ${name}.`);
+};
+
+indexNames(names, callback6);
 
 /*
   Invoke the each function, passing in the names array and a callback function.

@@ -217,3 +217,33 @@ const callBack4 = (check) => {
 };
 
 problem4(names, 'Gabriel', callBack4);
+
+////////// PROBLEM 5 //////////
+
+/*
+  Write a function called uniq that takes in an array and a callback function.
+  Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
+  Hint: you can use a nested for loop to do this.
+*/
+
+// CODE HERE
+/// COM BACK HERE
+
+////////// PROBLEM 6 //////////
+
+/* 
+  Write a function called each that takes in an array of names and a callback function. 
+  For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
+*/
+
+// CODE HERE
+const indexNames = (arr, callback) => {
+  arr.forEach((name, index) => {
+    callback(name, index);
+  });
+};
+const callback6 = (name, index) => {
+  console.log(`${index} My name is ${name}.`);
+};
+
+indexNames(names, callback6);

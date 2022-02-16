@@ -231,7 +231,13 @@ getUserById(users, callback7);
 */
 
 // CODE HERE
-
+const addingFactory = (number1) => {
+  return function (number2) {
+    const sum = number1 + number2;
+    return sum;
+  };
+};
+console.log(addingFactory(2)(4));
 /*
   Now that you have addingFactory, you can create other
   functions from it. 

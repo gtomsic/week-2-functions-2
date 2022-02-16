@@ -320,10 +320,24 @@ getUserById(users, callback7);
 
 // CODE HERE
 const addingFactory = (number1) => {
-  return function (number2 = number1) {
+  return function (number2) {
     const sum = number1 + number2;
     return sum;
   };
 };
 
-console.log(addingFactory(2));
+console.log(addingFactory(2)(4));
+
+/*
+  Now that you have addingFactory, you can create other
+  functions from it. 
+
+  You're going to invoke addingFactory and save the result
+  to a new variable. 
+
+  Create a variable called addTen and set it equal to 
+  the invocation of addingFactory passing in the number
+  10 as an arguemnt.
+*/
+
+// CODE HERE

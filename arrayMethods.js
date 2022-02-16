@@ -18,6 +18,8 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 */
 
 // CODE HERE
+const evenNumbers = mixedNumbers.filter((number) => number % 2 === 0);
+console.log(evenNumbers);
 
 
 /*

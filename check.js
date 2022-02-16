@@ -301,3 +301,29 @@ const callback7 = (arr, id) => {
 };
 
 getUserById(users, callback7);
+
+////////// CHALLENGE //////////
+
+/*
+  You'll be writing a higher order function that returns
+  another function. 
+
+  Create a function called addingFactory that takes in
+  one parameter (it will be a number).
+
+  addingFactory should return a function that takes in
+  one parameter (this will be another number).
+
+  The (inner) function that's being returned should add
+  the two parameters together and return the sum.
+*/
+
+// CODE HERE
+const addingFactory = (number1) => {
+  return function (number2 = number1) {
+    const sum = number1 + number2;
+    return sum;
+  };
+};
+
+console.log(addingFactory(2));

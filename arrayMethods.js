@@ -21,12 +21,10 @@ const mixedNumbers = [6, 3, 1, 7, 5, 2, 6, 8, 9, 4, 2, 7, 9, 3, 1, 8, 4, 3];
 const evenNumbers = mixedNumbers.filter((number) => number % 2 === 0);
 console.log(evenNumbers);
 
-/*
-
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
-const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
+const prices = [15.0, 23.0, 78.0, 34.0, 12.0, 86.0, 12.0, 79.0, 32.0];
 // Do not edit the code above.
 
 /*
@@ -163,7 +161,11 @@ const purchases = [
 */
 
 // CODE HERE
-const calcTax = orders.map((val) =>
-  Number((val.price * val.tax + val.price).toFixed(2))
-);
-console.log(calcTax);
+const total = [];
+const bobsTotal = purchases.forEach((item) => {
+  if (item.owner === 'Bob') {
+    total.push(item.price);
+  }
+});
+
+console.log(total.reduce((oldVal, currVal) => oldVal + currVal));

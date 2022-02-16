@@ -66,6 +66,13 @@ problem2(names, callback);
 */
 
 // CODE HERE
+const problem3 = (arr, callback) => {
+  arr.forEach((firstName) => callback(firstName));
+};
+const problem3CallBack = (firstName) => {
+  console.log('The first name in names is ' + firstName);
+};
+problem3(names, problem3CallBack);
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE

@@ -180,3 +180,19 @@ const callback = (name) => {
   console.log(name);
 };
 problem2(names, callback);
+
+////////// PROBLEM 3 //////////
+
+/*
+  Write a function called last that takes in an array and a callback function. 
+  Then invoke the callback, passing in the last element in the array as the argument.
+*/
+
+// CODE HERE
+const problem3 = (arr, callback) => {
+  arr.forEach((firstName) => callback(firstName));
+};
+const problem3CallBack = (firstName) => {
+  console.log('The first name in names is ' + firstName);
+};
+problem3(names, problem3CallBack);

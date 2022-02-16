@@ -246,4 +246,58 @@ const callback6 = (name, index) => {
   console.log(`${index} My name is ${name}.`);
 };
 
+/*
+  Invoke the each function, passing in the names array and a callback function.
+  The callback function should take in two paremeters, item and index.
+  The callback should print a string that says:
+  'The item at index [INDEXPARAM] is [ITEMPARAM].'
+*/
+
+// CODE HERE
 indexNames(names, callback6);
+
+///////// PROBLEM 7 //////////
+
+/*
+  Write a function called getUserById that takes in three parameters: an array of objects (users), an id and a callback, and searches for the user with a matching id.
+  When the correct user object is found, invoke the callback with the user object as an argument.
+*/
+
+// Do not edit the code below.
+var users = [
+  {
+    id: '12d',
+    email: 'tyler@gmail.com',
+    name: 'Tyler',
+    address: '167 East 500 North',
+  },
+  {
+    id: '15a',
+    email: 'cahlan@gmail.com',
+    name: 'Cahlan',
+    address: '135 East 320 North',
+  },
+  {
+    id: '16t',
+    email: 'ryan@gmail.com',
+    name: 'Ryan',
+    address: '192 East 32 North',
+  },
+];
+// Do not edit the code above.
+
+// CODE HERE
+const getUserById = (arr, callback) => {
+  const id = '16t';
+  callback(arr, id);
+};
+const callback7 = (arr, id) => {
+  const user = arr.filter((user) => user.id === id);
+  if (user.length > 0) {
+    console.log(...user);
+  } else {
+    console.log({ message: 'Sorry user not found.' });
+  }
+};
+
+getUserById(users, callback7);

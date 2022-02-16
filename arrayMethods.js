@@ -126,6 +126,10 @@ const orders = [
 */
 
 // CODE HERE
+const calcTax = orders.map((val) =>
+  Number((val.price * val.tax + val.price).toFixed(2))
+);
+console.log(calcTax);
 
 ////////// PROBLEM 6 //////////
 

@@ -150,8 +150,6 @@ const callback6 = (name, index) => {
   console.log(`${index} My name is ${name}.`);
 };
 
-indexNames(names, callback6);
-
 /*
   Invoke the each function, passing in the names array and a callback function.
   The callback function should take in two paremeters, item and index.
@@ -160,6 +158,7 @@ indexNames(names, callback6);
 */
 
 // CODE HERE
+indexNames(names, callback6);
 
 ////////// PROBLEM 7 //////////
 
@@ -192,6 +191,20 @@ var users = [
 // Do not edit the code above.
 
 // CODE HERE
+const getUserById = (arr, callback) => {
+  const id = '16t';
+  callback(arr, id);
+};
+const callback7 = (arr, id) => {
+  const user = arr.filter((user) => user.id === id);
+  if (user.length > 0) {
+    console.log(...user);
+  } else {
+    console.log({ message: 'Sorry user not found.' });
+  }
+};
+
+getUserById(users, callback7);
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE

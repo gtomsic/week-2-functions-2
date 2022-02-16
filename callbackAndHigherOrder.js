@@ -123,7 +123,6 @@ problem4(names, 'Gabriel', callBack4);
 */
 
 // CODE HERE
-// CODE HERE
 const uniq = (arr, callback) => {
   callback(arr);
 };
@@ -133,9 +132,11 @@ const uniqCallback = (arr) => {
   arr.forEach((name) => {
     sets.add(name);
   });
-  console.log([...sets]);
+  console.log(
+    'The new names array with all the duplicate items removed is [UNIQARRPARAM].',
+    [...sets]
+  );
 };
-uniq(names, uniqCallback);
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
@@ -145,6 +146,7 @@ uniq(names, uniqCallback);
 */
 
 // CODE HERE
+uniq(names, uniqCallback);
 
 ////////// PROBLEM 6 //////////
 

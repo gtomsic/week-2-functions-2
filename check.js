@@ -156,3 +156,27 @@ const multiply = (x, y, answer) => {
 };
 
 multiply(3, 4, answer);
+
+////////// PROBLEMS 2 - 6 //////////
+
+// The names array will be used in problems 2 - 6.
+
+// Do not edit the code below.
+var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+// Do not edit the code above.
+
+////////// PROBLEM 2 //////////
+
+/*
+  Write a function called first that takes in two parameters, an array and a callback function.
+  Then invoke the callback function, passing in the first element in the array as it's argument.
+*/
+
+// CODE HERE
+const problem2 = (arr, callback) => {
+  arr.forEach((name) => callback(name));
+};
+const callback = (name) => {
+  console.log(name);
+};
+problem2(names, callback);

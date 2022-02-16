@@ -42,6 +42,13 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 */
 
 // CODE HERE
+const problem2 = (arr, callback) => {
+  arr.forEach((name) => callback(name));
+};
+const callback = (name) => {
+  console.log(name);
+};
+problem2(names, callback);
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE

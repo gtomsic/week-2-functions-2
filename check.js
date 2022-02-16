@@ -342,5 +342,5 @@ console.log(addingFactory(2)(4));
 
 // CODE HERE
 
-const addTen = () => addingFactory(10)(10);
-console.log(addTen());
+const addTen = (number1, number2) => addingFactory(number1)(number2);
+console.log(addTen(10, 10));

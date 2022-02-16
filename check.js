@@ -344,3 +344,32 @@ console.log(addingFactory(2)(4));
 
 const addTen = (number1, number2) => addingFactory(number1)(number2);
 console.log(addTen(10, 10));
+
+/*
+  Now the inner function is stored in the addTen variable! 
+
+  Call the addTen function passing in another number and
+  console log the result.
+
+  Call it a second time, passing in a different number
+  to see the different outputs.
+*/
+
+// CODE HERE
+console.log(addTen(5, 10));
+
+/*
+  Let's make another function from the addingFactory. 
+
+  This time, pass in your favorite number and name
+  the variable addNUMBER with the name of the number
+  you chose. 
+
+  Once you create that, you can invoke the function
+  to add any number to your favorite number!
+*/
+
+// CODE HERE
+
+const addNumber = (fav1, fav2) => addingFactory(fav1)(fav2);
+console.log(addNumber(3, 6));

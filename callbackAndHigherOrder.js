@@ -264,6 +264,7 @@ console.log(addTen(10, 10));
 */
 
 // CODE HERE
+console.log(addTen(5, 10));
 
 /*
   Let's make another function from the addingFactory. 
@@ -277,3 +278,6 @@ console.log(addTen(10, 10));
 */
 
 // CODE HERE
+
+const addNumber = (fav1, fav2) => addingFactory(fav1)(fav2);
+console.log(addNumber(3, 6));

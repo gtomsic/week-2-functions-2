@@ -40,3 +40,22 @@ const prices = [15.0, 23.0, 78.0, 34.0, 12.0, 86.0, 12.0, 79.0, 32.0];
 // CODE HERE
 const postTaxPrices = prices.map((price) => Number((price * 1.07).toFixed(2)));
 console.log(postTaxPrices);
+
+////////// PROBLEM 3 //////////
+
+// Do not edit the code below.
+const populations = [8175133, 3792621, 2695598, 2100263];
+// Do not edit the code above.
+
+/*
+  Use the reduce method to calculate the sum of all the populations in the array.
+  The reduce function has a slightly different setup for it's callback.
+  function(runningTotal, curElement, curIndex, wholeArray){} Function Form
+  (runningTotal, curElement, curIndex, wholeArray)=>{} Arrow Form
+*/
+
+// CODE HERE
+const totalPopulation = populations.reduce(
+  (prevValue, currValue) => prevValue + currValue
+);
+console.log(totalPopulation);

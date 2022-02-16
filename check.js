@@ -341,3 +341,6 @@ console.log(addingFactory(2)(4));
 */
 
 // CODE HERE
+
+const addTen = () => addingFactory(10)(10);
+console.log(addTen());

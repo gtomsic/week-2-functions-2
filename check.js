@@ -1,6 +1,6 @@
 /*
     You can check your answers in this file
-    by console.logging the variables that are 
+    by console.logging the variables that are
     storing the results of your function calls.
 */
 
@@ -31,7 +31,7 @@ const prices = [15.0, 23.0, 78.0, 34.0, 12.0, 86.0, 12.0, 79.0, 32.0];
   Use the map method on the prices array to calculate a new array of post-tax prices.
   Use a 7% tax rate.
   Math reminder! To calculate the price after tax, multiply the price by 1 plus the taxRate as a decimal.
-  Example: if tax is 7%, the price afterTax could be calculated like this: afterTax = price * 1.07) 
+  Example: if tax is 7%, the price afterTax could be calculated like this: afterTax = price * 1.07)
   The map function also takes a callback with the parameters
   function(element, index, wholeArray){}  Function Form
   (element, index, wholeArray)=>{}    Arrow Form
@@ -128,3 +128,31 @@ const calcTax = orders.map((val) =>
   Number((val.price * val.tax + val.price).toFixed(2))
 );
 console.log(calcTax);
+
+////////// PROBLEM 1 //////////
+
+/*
+  Write a function called multiply that takes in three parameters: two numbers and a callback function.
+  Invoke the callback, passing in the product of the two numbers multiplied as the argument.
+*/
+
+// CODE HERE
+
+// UNCOMMENT THE FUNCTION CALL BELOW
+// RUN THIS FILE WITH NODE
+// CHECK YOUR ANSWER
+
+// multiply(4, 3, (answer) => {
+//   console.log('The answer is ' + answer); //should console.log 12
+// });
+
+const answer = (x, y) => {
+  const answer = x * y;
+  console.log('The answer is ' + answer); //should console.log 12
+};
+
+const multiply = (x, y, answer) => {
+  answer(x, y);
+};
+
+multiply(3, 4, answer);

@@ -7,7 +7,6 @@
 
 // CODE HERE
 
-
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
@@ -16,17 +15,24 @@
 //   console.log('The answer is ' + answer) //should console.log 12
 // })
 
+const answer = (x, y) => {
+  const answer = x * y;
+  console.log('The answer is ' + answer); //should console.log 12
+};
 
+const multiply = (x, y, answer) => {
+  answer(x, y);
+};
+
+multiply(3, 4, answer);
 
 ////////// PROBLEMS 2 - 6 //////////
 
 // The names array will be used in problems 2 - 6.
 
 // Do not edit the code below.
-var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
+var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 // Do not edit the code above.
-
-
 
 ////////// PROBLEM 2 //////////
 
@@ -35,8 +41,7 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
   Then invoke the callback function, passing in the first element in the array as it's argument.
 */
 
-// CODE HERE 
-
+// CODE HERE
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
@@ -45,8 +50,6 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 // first(names, firstName => {
 //   console.log('The first name in names is ' + firstName)
 // })
-
-
 
 ////////// PROBLEM 3 //////////
 
@@ -57,7 +60,6 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 
 // CODE HERE
 
-
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
@@ -65,8 +67,6 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 // last(names, lastName => {
 //   console.log('The last name in names is ' + lastName)
 // })
-
-
 
 ////////// PROBLEM 4 //////////
 
@@ -77,8 +77,7 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
   If the name does not exist, invoke the callback with false as the argument.
 */
 
-// CODE HERE 
-
+// CODE HERE
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
@@ -91,8 +90,6 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 //     console.log('Colt is not in the array')
 //   }
 // })
-
-
 
 ////////// PROBLEM 5 //////////
 
@@ -113,8 +110,6 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 
 // CODE HERE
 
-
-
 ////////// PROBLEM 6 //////////
 
 /* 
@@ -122,8 +117,7 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
-// CODE HERE 
-
+// CODE HERE
 
 /*
   Invoke the each function, passing in the names array and a callback function.
@@ -133,7 +127,6 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE
-
 
 ////////// PROBLEM 7 //////////
 
@@ -148,32 +141,31 @@ var users = [
     id: '12d',
     email: 'tyler@gmail.com',
     name: 'Tyler',
-    address: '167 East 500 North'
+    address: '167 East 500 North',
   },
   {
     id: '15a',
     email: 'cahlan@gmail.com',
     name: 'Cahlan',
-    address: '135 East 320 North'
+    address: '135 East 320 North',
   },
   {
     id: '16t',
     email: 'ryan@gmail.com',
     name: 'Ryan',
-    address: '192 East 32 North'
+    address: '192 East 32 North',
   },
-]
+];
 // Do not edit the code above.
 
-// CODE HERE 
-
+// CODE HERE
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
 // getUserById(users, '16t', user => {
-//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address)
 // })
 
 ////////// CHALLENGE //////////
